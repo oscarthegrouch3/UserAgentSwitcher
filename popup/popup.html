@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserAgent Switcher</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with Title & Master Toggle -->
+    <header class="header">
+      <div class="title-group">
+        <h1 class="title">UserAgent Switcher</h1>
+        <span id="statusBadge" class="badge badge-off">Off</span>
+      </div>
+      <label class="switch" title="Enable / Disable Switcher">
+        <input type="checkbox" id="enableToggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Platform Selector -->
+    <div class="form-group">
+      <label for="platformSelect" class="label">Platform</label>
+      <select id="platformSelect" class="select-input">
+        <option value="">-- Select Platform --</option>
+        <option value="windows">Windows</option>
+        <option value="macos">macOS</option>
+        <option value="linux">Linux</option>
+        <option value="ios">iOS (iPhone / iPad)</option>
+        <option value="android">Android</option>
+      </select>
+    </div>
+
+    <!-- Browser Preset Selector -->
+    <div class="form-group">
+      <label for="presetSelect" class="label">Browser</label>
+      <select id="presetSelect" class="select-input" disabled>
+        <option value="">-- Select Browser --</option>
+      </select>
+    </div>
+
+    <!-- Active User-Agent Status Display -->
+    <div class="form-group">
+      <label class="label">Active User-Agent</label>
+      <div id="activeUaText" class="preview-box"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="applyBtn" class="btn btn-primary">Apply & Reload Tab</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset to Default</button>
+    </div>
+  </div>
+
+  <script src="../presets.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

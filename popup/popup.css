@@ -1,0 +1,70 @@
+body {
+  width: 300px;
+  margin: 0;
+  padding: 14px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  background: #fff;
+  color: #111;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+select, button {
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+select {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.preview-box {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
+  font-family: monospace;
+  font-size: 11px;
+  word-break: break-all;
+  max-height: 50px;
+  overflow-y: auto;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.btn-secondary {
+  background: #f4f4f5;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}

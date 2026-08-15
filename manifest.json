@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "UserAgent Switcher",
+  "version": "1.0",
+  "description": "Switch UserAgent for Web Session.",
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "UserAgent Switcher"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{c7f1a3e8-8b92-4d15-a6e4-9f20c4e71d3a}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}
