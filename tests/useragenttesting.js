@@ -34,9 +34,7 @@ const TEST_PAGE_URL = 'https://example.com';
 
 let webExtProcess;
 
-// ---------------------------------------------------------------------------
 // LAUNCH: start Firefox with the extension loaded via web-ext
-// ---------------------------------------------------------------------------
 async function launchFirefoxWithExtension() {
   webExtProcess = execa(
     'npx',
@@ -67,12 +65,10 @@ async function stopFirefox() {
   }
 }
 
-// ---------------------------------------------------------------------------
 // SEED STORAGE: since there's no popup UI, write directly to
 // browser.storage.local by evaluating in the extension's background context.
 // This connects via Playwright's Firefox support for extension background
 // pages once attached to the running instance.
-// ---------------------------------------------------------------------------
 async function seedExtensionStorage(context) {
   const backgroundPage = context.backgroundPages()[0];
 
@@ -97,9 +93,7 @@ async function disableExtensionSpoof(context) {
   await backgroundPage.evaluate(() => browser.storage.local.set({ enabled: false }));
 }
 
-// ---------------------------------------------------------------------------
 // TESTS
-// ---------------------------------------------------------------------------
 async function testJsLevelSpoof(page) {
   await page.goto(TEST_PAGE_URL);
 
@@ -151,9 +145,7 @@ async function testToggleOff(context, page) {
   console.log('Toggle-off test passed\n');
 }
 
-// ---------------------------------------------------------------------------
 // MAIN
-// ---------------------------------------------------------------------------
 (async () => {
   let browserInstance;
 
