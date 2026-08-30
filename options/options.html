@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserAgent Switcher Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Extension Settings</h1>
+      <p>Manage your favorite User-Agents and global preferences.</p>
+    </header>
+
+    <section class="settings-section">
+      <h2>Custom Presets</h2>
+      <p class="hint">Add User-Agents you use frequently for quick access in the popup.</p>
+      
+      <div class="add-preset-group">
+        <input type="text" id="customName" placeholder="Preset Name">
+        <input type="text" id="customUA" placeholder="User-Agent String">
+        <button id="addPresetBtn" class="btn-primary">Add Preset</button>
+      </div>
+
+      <div id="savedPresetsList" class="presets-list">
+        <!-- Custom presets will be injected here -->
+      </div>
+    </section>
+
+    <section class="settings-section">
+      <h2>Global Preferences</h2>
+      <div class="pref-item">
+        <label class="pref-label">
+          <input type="checkbox" id="globalAutoReload">
+          <span>Default Auto-Reload to On</span>
+        </label>
+      </div>
+    </section>
+
+    <div class="footer">
+      <button id="saveAllBtn" class="btn-primary">Save All Settings</button>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

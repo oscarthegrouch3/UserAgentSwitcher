@@ -33,6 +33,11 @@
     "default_title": "UserAgent Switcher"
   },
 
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+
   "browser_specific_settings": {
     "gecko": {
       "id": "{c7f1a3e8-8b92-4d15-a6e4-9f20c4e71d3a}",

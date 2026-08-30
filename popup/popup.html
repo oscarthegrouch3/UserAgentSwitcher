@@ -41,10 +41,28 @@
       </select>
     </div>
 
+    <!-- Custom User-Agent Input -->
+    <div class="form-group custom-ua-container">
+      <button id="toggleCustomUaBtn" class="btn-text">Use Custom User-Agent</button>
+      <div id="customUaWrapper" class="hidden">
+        <label for="customUaInput" class="label">Custom User-Agent</label>
+        <input type="text" id="customUaInput" class="select-input" placeholder="Enter custom UA string...">
+      </div>
+    </div>
+
     <!-- Active User-Agent Status Display -->
     <div class="form-group">
       <label class="label">Active User-Agent</label>
       <div id="activeUaText" class="preview-box"></div>
+    </div>
+
+    <!-- Settings -->
+    <div class="form-group settings-group">
+      <span class="switch-text">Auto-reload tab on change</span>
+      <label class="switch">
+        <input type="checkbox" id="autoReloadToggle">
+        <span class="slider"></span>
+      </label>
     </div>
 
     <!-- Actions -->
